@@ -1,75 +1,81 @@
 const opcionMultiples = [
-  { pregunta: '¿Qué acción llevaron a cabo los hijos de Judá y Simeón en Bezec?', opciones: ['Hirieron a diez mil hombres', 'Pelearon contra Adoni-bezec y derrotaron al cananeo y al ferezeo', 'Cortaron los pulgares de las manos y de los pies de Adoni-bezec', 'Todas las anteriores'], respuesta: 3 },
-  { pregunta: '¿Qué ciudad conquistó Otoniel, hijo de Cenaz, después de tomar Quiriat-sefer?', opciones: ['Jerusalén', 'Hebrón', 'Debir', 'Bet-el'], respuesta: 2 },
-  { pregunta: '¿cuántos pulgares de las manos y los pies le cortaron a Adoni-bezec?', opciones: ['Pulgares de las manos.', 'Pulgares de los pies.', 'Pulgares de las manos y de los pies', 'No le cortaron los pulgares.'], respuesta: 2 },
-  //Hasta aqui llegan las preguntas del capitulo #1
-
-  { pregunta: '¿qué acción desobedecieron los hijos de Israel a pesar de la advertencia de Jehová?', opciones: ['Hacer pacto con los habitantes de la tierra', 'Construir altares en la tierra prometida.', 'Derribar los altares de los habitantes de la tierra.', 'Escuchar la voz de Jehová.'], respuesta: 3 },
-  { pregunta: '¿Qué consecuencia enfrentó Israel cuando se apartaron de Jehová y adoraron a otros dioses?', opciones: ['Paz y prosperidad.', 'Desobediencia y aflicción.', 'Salvación y liberación.', 'Celebración y victoria.'], respuesta: 1 },
-  { pregunta: '¿Qué sucedió cuando los jueces morían?', opciones: ['Israel alcanzaba la paz y la estabilidad', 'Israel seguía obedeciendo a Jehová sin desviarse', 'Israel caía en corrupción y adoraba a otros dioses', 'Israel continuaba con la misma fe y devoción'], respuesta: 2 },
-  //Hasta aqui llegan las preguntas del capitulo #2
-
-  { pregunta: '¿Cuál fue la duración de la paz en la tierra después de la subyugación de Moab por parte de los hijos de Israel?', opciones: ['Veinte años.', 'Cuarenta años.', 'Ochenta años', 'Cien años'], respuesta: 2 },
-  { pregunta: '¿Cuál fue la duración del servicio de los hijos de Israel a Eglón, rey de Moab?', opciones: ['Cinco años', 'Diez años.', 'Dieciocho años.', 'Veinte años'], respuesta: 3 },
-  { pregunta: '¿Qué objeto utilizó Aod para asesinar a Eglón, rey de Moab?', opciones: ['Un puñal', 'Una espada', 'Un arco y flechas', 'Un hacha'], respuesta: 0 },
-  //Hasta aqui llegan las preguntas del capitulo #3
-
-  { pregunta: '¿cuál fue el lugar donde Débora acostumbraba sentarse para administrar justicia?', opciones: ['Bajo una higuera', 'En el monte Tabor.', 'Entre Ramá y Bet-el, en los montes de Efraín.', 'En la ciudad de Cedes.'], respuesta: 3 },
-  { pregunta: '¿Cuál fue la duración del reinado opresivo de Jabín, rey de Canaán, sobre los hijos de Israel?', opciones: ['Deiz años', 'Veite años', 'Treinta años', 'Cuarenta años'], respuesta: 1 },
-  { pregunta: '¿quién fue el libertador que Jehová levantó para liberar a los hijos de Israel de Jabín, rey de Canaán?', opciones: ['Otoniel', 'Baraac', 'Gedeón', 'Sanson'], respuesta: 1 },
-  //Hasta aqui llegan las preguntas del capitulo #4
-
-  { pregunta: '¿quiénes cantaron un cántico después de la victoria sobre Sísara?', opciones: ['Débora y Baraac', 'Baraac y Jael', 'Débora y Samgar', 'Jael y Samgar'], respuesta: 0 },
-  { pregunta: '¿Qué tribu descendió a pelear desde los montes?', opciones: ['Efraín', 'Maquir', 'Zabulón', 'Isacar'], respuesta: 2 },
-  { pregunta: '¿quiénes fueron maldecidos por el ángel de Jehová por no venir en ayuda del Señor?', opciones: ['Los reyes de Canaan', 'Los moradores de Meroz', 'Los hijos de Israel', 'Los jefes de Isacar'], respuesta: 1 },
-  //Hasta aqui llegan las preguntas del capitulo #5
-
-  { pregunta: '¿Cuál fue la respuesta de Jehová cuando los hijos de Israel clamaron a Él?', opciones: ['Envió un profeta.', 'Les entregó en manos de los madianitas.', 'Les dio riquezas y prosperidad.', 'No les prestó atención.'], respuesta: 0 },
-  { pregunta: '¿Qué instrucción recibió Gedeón acerca del altar de Baal?', opciones: ['Edificarlo más grande.', 'Conservarlo como símbolo de unidad.', 'Derribarlo.', 'Decorarlo con flores y frutas.'], respuesta: 2 },
-  { pregunta: '¿Cuántos años fueron entregados los hijos de Israel en manos de Madián por su maldad ante los ojos de Jehová?', opciones: ['5 años', '7 años', '10 años', '12 años'], respuesta: 1 },
-  //Hasta aqui llegan las preguntas del capitulo #6
-
-  { pregunta: '¿Cuál fue la prueba que Jehová le puso a Gedeón para reducir su ejército?', opciones: ['Llevarlos a beber agua.', 'Hacerlos luchar entre ellos.', 'Realizar una competencia de valentia', 'Hacerles una serie de preguntas.'], respuesta: 0 },
-  { pregunta: '¿Cuál fue la señal que Jehová dio a Gedeón para confirmar la victoria sobre los madianitas?', opciones: ['El movimiento de las estrellas.', 'Que la esponja amaneciera mojada', 'La caída de un rayo', 'El sueño de un hombre en el campamento enemigo.'], respuesta: 3 },
-  { pregunta: '¿Cuántos hombres conformaban los escuadrones de Gedeón en el momento de la batalla?', opciones: ['100', '200', '300', '400'], respuesta: 2 },
-  //Hasta aqui llegan las preguntas del capitulo #7
+  //Preguntas del capitulo 1
+  { pregunta: '¿Qué acción llevaron a cabo los hijos de Juda y Simeón?', opciones: ['Hirieron a mil hombres', 'Pelearon contra Adoni-bezec y derrotaron a los cananeos y el ferezeo', 'Cortaron los pulgares de las manos y de los pies de Adoni-bezec', 'todas las anteriores'], respuesta: 3, cita: 'Jueces 1:4-6' },
+  { pregunta: '¿Qué ciudad conquistó Otoniel, hijo de Cenaz, después de tomar Quiriat-sefer?', opciones: ['Jerusalen', 'Hebrón', 'Debir', 'Bet-el'], respuesta: 2, cita: 'Jueces 1: 11-14' },
+  { pregunta: 'Selecciona la opción correcta', opciones: ['Otoniel hijo de Bejamín, hermano menor de Cenaz', 'Otoniel hijo de Cenaz, hermano menor de caleb', 'Otoniel hijo de Simeon, hermano menor de Caleb', 'Otoniel hijo de  Cenaz, hermano menor de Simeon'], respuesta: 1, cita: 'Jueces 1:13' },
+  //Preguntas del capitulo 2
+  { pregunta: '¿A qué edad José murió?', opciones: ['100', '110', '111', 'Ninguna de las anteriores'], respuesta: 1, cita: 'Jueces 2:8'},
+  { pregunta: '¿En que lugar fue sepultado José?', opciones: ['En Quiriat-sefer, en los montes de Gilgal, al sur del monte de Boquim', 'En Quiriat-sefer, en los montes de Efraín, al sur del monte de Gaas', 'La biblia no especifica en que lugar fue enterrado :0', 'En Timnat-sera, en los montes de Efraín, al norte del monte de Gaas'], respuesta: 3, cita: 'Jueces 2:9'},
+  { pregunta: '¿Qué ocurrió después de la muerte de José?', opciones: ['Los hijos de Israel hicieron lo malo ante los ojos de Dios.', 'Todos los hijos de Israel dieron voces y lloraron.', 'Fueron a conquistar nuevas tierras.', 'Cumplieron el mandato de Jehová.'], respuesta: 0, cita: 'Jueces 2:11' },
+  //Preguntas del capitulo 3
+  { pregunta: '¿Quiénes habitaban en el monte Líbano?', opciones: ['Los amorreos y jebuseos', 'Los heveos y sidonios', 'Los filisteos y cananeos', 'Los heteos y ferezeos'], respuesta: 1, cita: 'Jueces 3:3' },
+  { pregunta: '¿Cuánto tiempo sirvieron los hijos de Israel a Eglon, rey de los moabitas?', opciones: ['Ocho años', 'Dieciocho años', 'Cuarenta años', 'Ochenta años'], respuesta: 1, cita: 'Jueces 3:14' },
+  { pregunta: '¿Quién mató a seiscientos hombres de los filisteos con una aguijada de bueyes?', opciones: ['Aod', 'Otoniel', 'Samgar', 'Eglón'], respuesta: 2, cita: 'Jueces 3:31' },
+  //Preguntas del capitulo 4
+  { pregunta: 'Según el capitulo 4 de jueces ¿Quién gobernaba Israel en aquel tiempo?', opciones: ['Sísara', 'Débora', 'Jabín', 'Barac'], respuesta: 1, cita: 'Jueces4:4' },
+  { pregunta: '¿Quién fue convocado por Débora para luchar contra Sísara?', opciones: ['Haber', 'Barac', 'Jabin', 'Lapidot'], respuesta: 1, cita: 'Jueces 4:6-7' },
+  { pregunta: '¿Cómo murió Sísara?', opciones: ['Fue asesinado en la batalla', 'Fue asesinado mientras dormía', 'Murió de hambre y sed', 'Murió de viejo'], respuesta: 1, cita: 'Jueces 4:21' },
+  //Preguntas del capitulo 5
+  { pregunta: 'Según el capitulo 5 de jueces ¿Quiénes cantaron?', opciones: ['Barac y Jael', 'Débora y Barac ', 'Jehová y Débora', 'Los hijos de Israel'], respuesta: 1, cita: 'Jueces 5:1' },
+  { pregunta: '¿Qué sucedió cuando Jehová salió de Seir, según el texto?', opciones: ['Los cielos se oscurecieron', 'La tierra tembló y las nubes gotearon aguas', 'Los montes se aplastaron', 'Se produjo un gran fuego'], respuesta: 1, cita: 'Jueces 5:4-5' },
+  { pregunta: '¿Quién no ayudó a Jehová contra los fuertes?', opciones: ['Heber, el ceneo', 'Barac hijo de Abinoam', 'Los habitantes de Meroz', 'La tribu de Rubén'], respuesta: 2, cita: 'Jueces 5:23' },
+  //Preguntas del capitulo 6
+  { pregunta: '¿Quién oprimió a los hijos de Israel por siete años según Jueces 6?', opciones: ['Los egipcios', 'Los madianitas', 'Los amalecitas', 'Los amorreos'], respuesta: 1, cita: 'Jueces 6:1' },
+  { pregunta: '¿Quién le dijo a Gedeón que Jehová estaba con él?', opciones: ['Un profeta', 'Los hijos de israel', 'El angel de Jehova', 'Jehova mismo'], respuesta: 2, cita: 'Jueces 6:12' },
+  { pregunta: '¿Cómo confirmó Gedeón que Jehová lo salvaría?', opciones: ['Por la voz del angel', 'Por una señal de un vellón de lana', 'Por la derrota de los madianitas', 'Por la liberación de los egipcios'], respuesta: 1, cita: 'Jueces 6:37' },
+  //Preguntas del capitulo 7
+  { pregunta: '¿Por qué Jehová redujo el número de hombres con Gedeón?', opciones: ['Para que los hombres no se cansaran en la batalla', 'Para evitar que Israel se jactara de haber logrado la victoria por sí mismo', 'Porque los madianitas también tenían un número reducido de hombres', 'Para demostrar su desagrado con los hombres de Gedeón'], respuesta: 1, cita: 'Jueces 7:2' },
+  { pregunta: '¿Cómo seleccionó Jehová a los hombres que irían a la batalla con Gedeón?', opciones: ['Por sorteo', 'Por su habilidad en la batalla', 'Por la forma en que bebían agua', 'Por su lealtad a Gedeón'], respuesta: 2, cita: 'Jueces 7:5' },
+  //Preguntas del capitulo 8
+  { pregunta: '¿Cómo respondieron los hombres de Sucot y Peniel cuando Gedeón les pidió provisiones para sus hombres?', opciones: ['Proporcionaron las provisiones de inmediato.', 'Negaron el suministro de provisiones hasta que Gedeón derrotara a los reyes de Madián', 'Ignoraron la solicitud de Gedeón', 'Lucharon contra Gedeón y sus hombres'], respuesta: 1, cita: 'Jueces 8:6-9' },
+  { pregunta: '¿Qué hizo Gedeón con Zeba y Zalmuna, los reyes de Madián, después de capturarlos?', opciones: ['Los libero', 'Los usó como rehenes para negociar.', 'Los mato', 'Los llevó a Israel como trofeos'], respuesta: 1, cita: 'Jueces 8:21' },
+  //Preguntas del capitulo 9
+  { pregunta: ' ¿Cómo consiguió Abimelec el apoyo de los hombres de Siquem para gobernar sobre ellos?', opciones: ['Prometió compartir con ellos su riqueza', 'Les recordó su parentesco, ya que era de su misma carne y hueso.', 'Derrotó a los setenta hijos de Jerobaal en combate.', 'Se casó con la hija del líder de Siquem.'], respuesta: 1, cita: 'Jueces 9:2' },/*
+  { pregunta: '', opciones: ['', '', '', ''], respuesta: 3, cita: '' },
+  //Preguntas del capitulo 10
+  { pregunta: '', opciones: ['', '', '', ''], respuesta: 3, cita: '' },
+  { pregunta: '', opciones: ['', '', '', ''], respuesta: 3, cita: '' },
+  //Preguntas del capitulo 11
+  { pregunta: '', opciones: ['', '', '', ''], respuesta: 3, cita: '' },
+  { pregunta: '', opciones: ['', '', '', ''], respuesta: 3, cita: '' },*/
   // Más preguntas...
 ];
 
 const verdaderoFalso = [
-  { pregunta: 'Los hijos de Judá conquistaron la ciudad de Gaza durante sus campañas.', opciones: ['Verdadero', 'Falso'], respuesta: 0 },
-  { pregunta: 'Caleb ofreció a su hija Acsa en matrimonio a quien lograra tomar Quiriat-sefer.', opciones: ['Verdadero', 'Falso'], respuesta: 0 },
-  { pregunta: 'Judá subió primero a pelear contra los cananeos porque Jehová entregó la tierra en sus manos.' , opciones: ['Verdadero', 'Falso'], respuesta: 0 }, 
-  //Hasta aqui llegan las preguntas del capitulo #1
-
-  { pregunta: 'El ángel de Jehová les recordó a los hijos de Israel que los había sacado de Egipto y los había llevado a la tierra prometida.', opciones: ['Verdadero', 'Falso'], respuesta: 0 },
-  { pregunta: 'Josué fue sepultado en su heredad en los montes de Judá.', opciones: ['Verdadero', 'Falso'], respuesta: 1 },
-  { pregunta: 'Jehová decidió expulsar a todas las naciones de la tierra después de la muerte de Josué.', opciones: ['Verdadero', 'Falso'], respuesta: 1 },
-  //Hasta aqui llegan las preguntas del capitulo #2
-
-  { pregunta: 'Jehová dejó a los pueblos en la tierra para evitar que el linaje de los hijos de Israel aprendiera a hacer la guerra', opciones: ['Verdadero', 'Falso'], respuesta: 1 },
-  { pregunta: 'Otoniel fue el libertador que Jehová levantó para liberar a los hijos de Israel de los filisteos', opciones: ['Verdadero', 'Falso'], respuesta: 1 },
-  { pregunta: 'Después de la subyugación de Moab, la paz en la tierra duró cincuenta años', opciones: ['Verdadero', 'Falso'], respuesta: 1 },
-  //Hasta aqui llegan las preguntas del capitulo #3
-
-  { pregunta: 'Después de la muerte de Aod, los hijos de Israel siguieron haciendo lo malo ante los ojos de Jehová.', opciones: ['Verdadero', 'Falso'], respuesta: 0 },
-  { pregunta: 'Débora, la profetisa, envió a llamar a Barac para luchar contra Sísara, capitán del ejército de Jabín.', opciones: ['Verdadero', 'Falso'], respuesta: 0 },
-  { pregunta: 'Sísara fue asesinado por Jael, mujer de Heber, mientras descansaba en su tienda.', opciones: ['Verdadero', 'Falso'], respuesta: 0 },
-  //Hasta aqui llegan las preguntas del capitulo #4
-
-  { pregunta: 'El pueblo de Zabulón y Neftalí fueron los primeros en unirse a Barac para luchar contra Sísara.', opciones: ['Verdadero', 'Falso'], respuesta: 1 },
-  { pregunta: 'Sísara murió a manos de Débora en el valle de Zaanaim.', opciones: ['Verdadero', 'Falso'], respuesta: 1 },
-  { pregunta: 'Débora era una profetisa y líder en Israel.', opciones: ['Verdadero', 'Falso'], respuesta: 0 },
-  //Hasta aqui llegan las preguntas del capitulo #5
-
-  { pregunta: 'Los hijos de Israel se escondieron en cuevas para protegerse de los madianitas.', opciones: ['Verdadero', 'Falso'], respuesta: 0 },
-  { pregunta: 'El ángel de Jehová le dijo a Gedeón que su familia era la más rica en Manasés.', opciones: ['Verdadero', 'Falso'], respuesta: 1 },
-  { pregunta: 'Jehová respondió a Gedeón que esperaría hasta que él volviera con una ofrenda.', opciones: ['Verdadero', 'Falso'], respuesta: 0 },
-  //Hasta aqui llegan las preguntas del capitulo #6
-
-  { pregunta: 'Gedeón lideró un ejército de mil hombres en la batalla contra los madianitas.', opciones: ['Verdadero', 'Falso'], respuesta: 1 },
-  { pregunta: 'Gedeón capturó a dos príncipes amalecitas llamados Oreb y Zeeb.', opciones: ['Verdadero', 'Falso'], respuesta: 1 },
-  { pregunta: 'Los madianitas y amalecitas se habían dispersado por el desierto como una plaga de langostas.', opciones: ['Verdadero', 'Falso'], respuesta: 1 },
+  //Preguntas del capitulo 1
+  { pregunta: 'Juda tomo a Gaza como territorio.', opciones: ['Verdadero', 'Falso'], respuesta: 0, cita: 'Jueces 1:18'},
+  { pregunta: 'Juda tenia un hermano llamado simeon', opciones: ['Verdadero', 'Falso'], respuesta: 0, cita: 'Jueces 1:3'},
+  //Preguntas del capitulo 2
+  { pregunta: '¿El ángel de Jehová subió de Gilgal a Boquim para dar un mensaje a los hijos de Israel?', opciones: ['Verdadero', 'Falso'], respuesta: 0, cita: 'Jueces 2:1'},
+  { pregunta: '¿Los hijos de Israel siempre obedecieron a los mandamientos de Jehová, incluso después de la muerte de los jueces?', opciones: ['Verdadero', 'Falso'], respuesta: 2, cita: 'Jueces 2:19'},
+  //Preguntas del capitulo 3
+  { pregunta: 'Los hijos de Israel clamaron a Jehová, y Jehová levantó un libertador a los hijos de Israel; esto es, a Otoniel hijo de Cenaz, hermano menor de Caleb', opciones: ['Verdadero', 'Falso'], respuesta: 0, cita:'Jueces 3:9' },
+  { pregunta: 'Aod asesinó a Eglón, rey de Moab, con un puñal de dos filos.', opciones: ['Verdadero', 'Falso'], respuesta: 0, cita:'Jueces 3: 21-22' },
+  //Preguntas del capitulo 4
+  { pregunta: 'Los hijos de Israel sirvieron a los baales y a las imágenes de Asera después de ser liberados de Eglón, rey de Moab.', opciones: ['Verdadero', 'Falso'], respuesta: 1, cita: 'Jueces 3:7-8'},
+  { pregunta: 'Sísara, capitán del ejército, era el rey de Canaán', opciones: ['Verdadero', 'Falso'], respuesta: 1, cita: 'Jueces 4:2'},
+  //Preguntas del capitulo 5
+  { pregunta: 'Según Jueces 5, los caminos quedaron abandonados en los días de Jael.', opciones: ['Verdadero', 'Falso'], respuesta: 0, cita:'Jueces 5:6' },
+  { pregunta: 'En jueces 5 menciona que el pueblo de Zabulón se quedó al margen del conflicto', opciones: ['Verdadero', 'Falso'], respuesta: 1, cita:'Jueces 5:18' },
+  //Preguntas del capitulo 6
+  { pregunta: 'Gedeón era el hijo mayor de su padre.', opciones: ['Verdadero', 'Falso'], respuesta: 1, cita:'Jueces 6:15' },
+  { pregunta: 'Gedeón destruyó el altar de Baal en el día', opciones: ['Verdadero', 'Falso'], respuesta: 1, cita:'Jueces 6:27' },
+  //Preguntas del capitulo 7
+  { pregunta: 'El campamento de los madianitas se ubicaba al sur de la fuente Harod', opciones: ['Verdadero', 'Falso'], respuesta: 1, cita:'Jueces 7:1' },
+  { pregunta: 'Los hombres que se quedaron con Gedeón para pelear contra los madianitas eran aquellos que bebieron agua doblando sus rodillas', opciones: ['Verdadero', 'Falso'], respuesta: 1, cita:'Jueces 7:6' },
+  //Preguntas del capitulo 8
+  { pregunta: 'Después de derrotar a los madianitas, Gedeón aceptó ser señor sobre los israelitas.', opciones: ['Verdadero', 'Falso'], respuesta: 1, cita:'Jueces 8:23' },
+  { pregunta: 'Al regresar de la batalla, Gedeón castigó a los hombres de Sucot con espinos y abrojos.', opciones: ['Verdadero', 'Falso'], respuesta: 0, cita:'Jueces 8:16' },
+  //Preguntas del capitulo 9
+  { pregunta: 'Abimelec mató a todos los hijos de Jerobaal para asumir el poder.', opciones: ['Verdadero', 'Falso'], respuesta: 1, cita:'jueces 9:5' },
+  { pregunta: 'Abimelec gobernó sobre Israel durante tres años antes de que se produjera una discordia', opciones: ['Verdadero', 'Falso'], respuesta: 0, cita:'Jueces 9:22' },
+  //Preguntas del capitulo 10
+  { pregunta: 'Tola, hijo de Fúa, juzgó a Israel por veintitrés años', opciones: ['Verdadero', 'Falso'], respuesta: 0, cita:'Jueces 10:2' },
+  { pregunta: 'Jair galaadita tenía treinta hijos y treinta ciudades.', opciones: ['Verdadero', 'Falso'], respuesta: 0, cita:'Jueces 10:4' },
+  //Preguntas del capitulo 11
+  { pregunta: 'Los ancianos de Galaad querían que Jefté fuera su caudillo para luchar contra los amonitas.', opciones: ['Verdadero', 'Falso'], respuesta: 0, cita:'Jueces 11:6' },
+  { pregunta: 'El rey de los hijos de Amón atendió las razones que Jefté le había enviado.', opciones: ['Verdadero', 'Falso'], respuesta: 1, cita:'Jueces 11:28' },
+  
   // Más preguntas...
 ];
 
@@ -77,51 +83,45 @@ const verdaderoFalso = [
 //{ pregunta: '' , opciones: , respuesta: 0 }, 
 
 const preguntasAbiertas = [
-  { pregunta: '¿Cuántos hombres fueron heridos en Bezec durante la batalla?', respuesta: '10000' },
-  { pregunta: '¿Quién conquistó Quiriat-sefer?', respuesta: 'otoniel' },
-  { pregunta: '¿Cuántos reyes recogían migajas debajo de la mesa de Adoni-bezec?', respuesta: '70' },
-  { pregunta: '¿Qué ciudad fue conquistada por los hijos de Judá?', respuesta: 'jerusalen' },
-  { pregunta: '¿Qué tribu subió contra Bet-el?', respuesta: 'la casa de jose' },
-  //Hasta aqui llegan las preguntas del capitulo #1
-
-  { pregunta: '¿Cómo se llamó el lugar donde los hijos de Israel ofrecieron sacrificios a Jehová?', respuesta: 'Boquim' },
-  { pregunta: '¿En qué montes fue sepultado Josué?', respuesta: 'montes de efraín' },
-  { pregunta: '¿Cuál fue la edad de Josué al momento de su muerte?', respuesta: '110' },
-  { pregunta: '¿Qué provocó la aflicción y la ira de Jehová contra Israel?', respuesta: 'desobediencia' },
-  { pregunta: '¿A quiénes adoraron los hijos de Israel cuando se apartaron de Jehová?', respuesta: 'baal y astarot' },
-  //Hasta aqui llegan las preguntas del capitulo #2
-
-  { pregunta: '¿Cuál era el propósito de Jehová al dejar a ciertos pueblos en la tierra de Israel?', respuesta: 'probar a israel' },
-  { pregunta: '¿Cuál fue el nombre del libertador que Jehová levantó para liberar a los hijos de Israel de Cusan-risataim?', respuesta: 'otoniel' },
-  { pregunta: '¿Qué objeto llevó Aod como parte de un engaño hacia Eglón, rey de Moab?', respuesta: 'un presente' },
-  { pregunta: '¿cuál fue la reacción de Eglón cuando Aod le dijo que tenía una palabra de Dios para él?', respuesta: 'se levanto de la silla' },
-  { pregunta: '¿Cuántos hombres filisteos mató Samgar con una aguijada de bueyes?', respuesta: '600' },
-  //Hasta aqui llegan las preguntas del capitulo #3
-
-  { pregunta: '¿Quién era el rey de Canaán durante el tiempo en que los hijos de Israel clamaron a Jehová?', respuesta: 'jabin' },
-  { pregunta: '¿Quién fue el responsable de la muerte de Sísara, capitán del ejército de Jabín?', respuesta: 'jael' },
-  { pregunta: '¿Que objeto utilizo Jael para matar a Sísara?', respuesta: 'una estaca' },
-  { pregunta: '¿Cuál era la función de Débora en Israel además de ser profetisa?', respuesta: 'gobernaba a israel' },
-  { pregunta: '¿Cuál fue la duración del reinado opresivo de Jabín, rey de Canaán, sobre los hijos de Israel?', respuesta: '20 años' },
-  //Hasta aqui llegan las preguntas del capitulo #4
-
-  { pregunta: '¿Quién fue el líder del ejército de Jabín, rey de Canaán?', respuesta: 'sisara' },
-  { pregunta: '¿Cuánto tiempo duró la paz en la tierra después de la derrota de Sísara?', respuesta: '40' },
-  { pregunta: '¿A quién se dirige Débora al comienzo del cántico?', respuesta: 'a los reyes y principes' },
-  { pregunta: '¿Cuál fue el pedido de agua de Sísara y qué recibió en su lugar?', respuesta: 'pidio agua y recibio leche' },
-  { pregunta: '¿Cuántos años duró la paz en la tierra después de los eventos descritos?', respuesta: '90 años' },
-  //Hasta aqui llegan las preguntas del capitulo #5
-
-  { pregunta: '¿Cómo se describió a Gedeón?', respuesta: 'hombre esforzado y valiente' },
-  { pregunta: '¿Qué ofreció Gedeón como ofrenda?', respuesta: 'un cabrito y unos panes sin levadura' },
-  { pregunta: 'Qué construyó Gedeón después de la señal?', respuesta: 'un altar' },
-  { pregunta: '¿Qué le ordenó Jehová a Gedeón que derribara?', respuesta: 'el altar a baal' },
-  { pregunta: '¿Cuál fue el nombre dado a Gedeón después de derribar el altar de Baal?', respuesta: 'jerobaal' },
-  //Hasta aqui llegan las preguntas del capitulo #6
+  //Preguntas del capitulo 1
+  { pregunta: 'Según jueces 1:16 en donde dice textualmente lo siguiente: “Y los hijos del Ceneo, suegro de Moisés, subieron de la ciudad de las ____________ con los hijos de juda al desierto de Juda de Juda” completa la parte que falta.', respuesta: 'Palmera', cita: 'Jueces 1:16'},
+  { pregunta: '¿Quién conquisto Quiriat-safer?', respuesta: 'Otoniel', cita: ''},
+  //Preguntas del capitulo 2
+  { pregunta: '¿Cómo reaccionaron los hijos de Israel tras las palabras del ángel de Jehová?', respuesta: 'alzaron la voz y lloraron', cita: 'Jueces 2:4'},
+  { pregunta: '¿A qué dioses adoraron los hijos de Israel después de la muerte de Josué?', respuesta: 'a los dioses baales', cita: 'Jueces 2:11'},
+  //Preguntas del capitulo 3
+  { pregunta: '¿A quién sirvieron los hijos de Israel durante ocho años?', respuesta: 'A Cusan-risataim, rey de Mesopotamia.', cita: ''},
+  { pregunta: '¿Cómo se llama el hijo de Cenaz?', respuesta: 'Otoniel', cita: 'Jueces 3:9'},
+  //Preguntas del capitulo 4
+  { pregunta: '¿Dónde solía sentarse Débora para que los hijos de Israel acudieran a ella?', respuesta: 'Bajo una palmera, entre Ramá y Bet-el', cita: 'Jueces 4:5'},
+  { pregunta: '¿Cómo logró Jael asesinar a Sísara?', respuesta: 'Le clavó una estaca en las sienes mientras dormía', cita: 'Jueces 4:21'},
+  //Preguntas del capitulo 5
+  { pregunta: '¿Cómo describiría la acción de Débora según el texto?', respuesta: 'Débora se levantó como una madre en Israel cuando las aldeas estaban abandonadas y había decaído', cita: 'Jueces 5:7'},
+  { pregunta: '¿Cómo se describe el comportamiento del pueblo de Rubén en el capitulo 5 de jueces?', respuesta: 'El pueblo de Rubén se quedó entre los rediles, tomando grandes decisiones pero sin tomar acción', cita: 'Jueces 5:16'},
+  //Preguntas del capitulo 6
+  { pregunta: '¿Por qué los hijos de Israel fueron entregados en manos de los madianitas?', respuesta: 'Porque hicieron lo malo ante los ojos de Jehová', cita: 'Jueces 6:7 '},
+  { pregunta: '¿Cómo se llamaba el padre de Gedeon?', respuesta: 'Joas', cita: 'Jueces 6:29'},
+  //Preguntas del capitulo 7
+  { pregunta: '¿Qué le pidió Gedeón a Jehová antes de partir a preparar su ofrenda?', respuesta: 'Que esperara hasta que él volviera con su ofrenda', cita: 'Jueces 6:18'},
+  { pregunta: '¿Cómo se aseguró Jehová de que Israel no se jactara de su propia fuerza en la victoria sobre los madianitas?', respuesta: 'Redujo el número de hombres que lucharían contra los madianitas', cita: 'Jueces 7:2'},
+  //Preguntas del capitulo 8
+  { pregunta: '¿Cómo respondió Gedeón cuando los israelitas le pidieron que gobernara sobre ellos?', respuesta: 'Rechazó la petición de los israelitas de gobernar sobre ellos', cita: 'Jueces 8:23'},
+  { pregunta: '¿Por qué los hombres de Efraín estaban enojados con Gedeón al principio del relato y cómo aplacó Gedeón ese enojo?', respuesta: 'porque no los había llamado para la guerra contra los madianitas', cita: 'Jueces 8:2-3'},
+  //Preguntas del capitulo 9
+  { pregunta: '¿Qué acción provocó la rebelión de los hombres de Siquem contra Abimelec?', respuesta: 'Dios envió un espíritu de discordia entre Abimelec y los hombres de Siquem, lo que provocó su rebelión', cita: 'Jueces 9:22-23'},
+  { pregunta: '¿Cómo murió Abimelec?', respuesta: 'Abimelec murió cuando una mujer dejó caer un pedazo de rueda de molino sobre su cabeza, rompiéndole el cráneo', cita: 'Jueces 9:53'},
+  //Preguntas del capitulo 10
+  { pregunta: '¿Cómo respondieron los hijos de Israel cuando Jehová les dijo que ya no los liberaría?', respuesta: 'admitieron que habían pecado y le pidieron a Jehová que los librara en ese día', cita: 'Jueces 10:15'},
+  { pregunta: '¿Qué hicieron los hijos de Israel para intentar aliviar su aflicción después de que Jehová dijera que ya no los liberaría?', respuesta: 'Quitaron de entre ellos los dioses ajenos y comenzaron a servir a Jehová', cita: 'Jueces 10:16'},
+  //Preguntas del capitulo 11
+  { pregunta: '¿Qué voto hizo Jefté a Jehová y qué implicaciones tuvo esto para su hija?', respuesta: 'Que si le entregaba a los amonitas en sus manos, cualquier cosa que saliera de las puertas de su casa a recibirlo cuando regresara victorioso sería de Jehová y la ofrecería en holocausto. La implicación para su hija fue que ella fue la que salió a recibir a Jefté, y por lo tanto, según el voto de Jefté, debía ofrecerla en holocausto a Jehová', cita: 'Jueces 11:30-31'},
+  { pregunta: '¿Cómo respondió la hija de Jefté a la situación que enfrentaba debido al voto de su padre?', respuesta: 'Aceptó la situación', cita: 'Jueces 11:36'},
+  
   // Más preguntas...
 ];
 
-let preguntas = [...opcionMultiples, ...verdaderoFalso, ...preguntasAbiertas]; 
+let preguntas = [...opcionMultiples, ...verdaderoFalso]; 
+let preguntasMostrar = [...opcionMultiples, ...verdaderoFalso, ...preguntasAbiertas]; 
 preguntas.sort(() => Math.random() - 0.5); // Para mezclar las preguntas de forma aleatoria
 let puntosGanados = 0;
 let puntosPerdidos = 0;
@@ -176,16 +176,20 @@ function mostrarPregunta() {
 
 function checkAnswer(respuesta) {
   const mensaje = document.getElementById('mensaje');
-  if(respuesta === preguntas[indicePreguntaActual].respuesta) {
-    puntosGanados += 1;
-    mensaje.textContent = "¡Acertaste la respuesta!";
-  } else {
-    puntosPerdidos += 1;
-    mensaje.textContent = "Te has equivocado.";
+  if (preguntas[indicePreguntaActual] !== preguntasAbiertas[indicePreguntaActual]) {
+    if (respuesta === preguntas[indicePreguntaActual].respuesta) {
+      puntosGanados += 1;
+      mensaje.textContent = "¡Acertaste la respuesta!";
+    } else {
+      puntosPerdidos += 1;
+      mensaje.textContent = "Te has equivocado.";
+    }
   }
   document.getElementById('puntosGanados').textContent = puntosGanados;
   document.getElementById('puntosPerdidos').textContent = puntosPerdidos;
 }
+
+
 
 function showNextQuestion() {
   indicePreguntaActual += 1;
@@ -194,7 +198,30 @@ function showNextQuestion() {
   } else {
     const mensaje = document.getElementById('mensaje');
     mensaje.textContent = '¡Juego terminado!';
+    mostrarResumen();  // Llama a la función para mostrar el resumen
   }
 }
+
+
+function mostrarResumen() {
+  const resumen = document.getElementById('resumen');
+  const quizContainer = document.getElementById('quizContainer');
+
+  // Esconde el contenedor del cuestionario
+  quizContainer.style.display = "none";
+
+  for (let pregunta of preguntasMostrar) {
+    const preguntaElemento = document.createElement('p');
+    let respuesta = pregunta.respuesta;
+    if (pregunta.opciones) {
+      respuesta = pregunta.opciones[pregunta.respuesta];
+    }
+
+    preguntaElemento.textContent = pregunta.pregunta + " Respuesta correcta: " + respuesta + " Cita biblica: " + pregunta.cita;
+    resumen.appendChild(preguntaElemento);
+  }
+}
+
+
 
 mostrarPregunta(); // Mostrar la primera pregunta

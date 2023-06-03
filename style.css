@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0;
+  }
+  
+  #quizContainer, #resumen {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    column-count: 2;
+  }
+  
+  button {
+    color: #fff;
+    background-color: #673ab7; /* Morado */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  button:hover {
+    background-color: #5e35b1;
+  }
+  
+  #nextButton {
+    color: #fff;
+    background-color: #2e7d32; /* Verde oscuro */
+  }
+  
+  #nextButton:hover {
+    background-color: #2e7d32cc;
+  }
+  
+  p {
+    border: 1px solid #673ab7; /* Morado */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #f8bbd0; /* Rosado */
+  }
+  
+  input {
+    padding: 5px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #673ab7; /* Morado */
+    border-radius: 3px;
+  }
+  
+  @media (max-width: 800px) {
+    #quizContainer, #resumen {
+      margin: 10px;
+      column-count: 1;
+    }
+  }
+
+#resumen {
+    column-count: 2;
+    padding: 10px;
+  }
+  
+  #resumen p {
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+  }
